@@ -47,12 +47,12 @@ const authClient = Auth.createClient({
 const Hello = compose(
   withApollo,
 )(({ client }) => {
-  const auth = useAuth();
-  const logout = async () => {
-    await client.clearStore();
+  // const auth = useAuth();
+  // const logout = async () => {
+  //   await client.clearStore();
 
-    auth.authClient.logout();
-  };
+  //   auth.authClient.logout();
+  // };
 
   return(
     <Query query={ CURRENT_USER_QUERY }>

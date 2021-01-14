@@ -175,6 +175,9 @@ export default function Tareas() {
   };
   //Custom hook para realizar la consultas de todas las tareas para que se rendericen
   useGetTasks(error, data);
+  if(loading){
+    return <h1>Cargando</h1>
+  }
   if(error){
     return <h1>Ocurrio un error de conexion, actualiza la pagina</h1>
   }
